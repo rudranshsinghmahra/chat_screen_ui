@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget senderChat(BuildContext context){
+Widget senderChat(BuildContext context, String text) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.end,
     children: [
@@ -15,11 +15,12 @@ Widget senderChat(BuildContext context){
                   bottomLeft: Radius.circular(20),
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20))),
-          child: const Padding(
-            padding: EdgeInsets.only(left: 20.0, top: 10,bottom: 10,right: 10),
+          child: Padding(
+            padding: const EdgeInsets.only(
+                left: 20.0, top: 10, bottom: 10, right: 10),
             child: Text(
-              "Hey Bro!!!",
-              style: TextStyle(
+              text,
+              style: const TextStyle(
                 fontSize: 18,
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
